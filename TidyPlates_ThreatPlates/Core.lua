@@ -188,6 +188,7 @@ function TidyPlatesThreat:OnInitialize()
 				["F4"] = {true, true, true, nil, nil, nil, "normal", color = {r = 1, g = 0.4, b = 0.4}},
 				["F5"] = {true, true, true, nil, nil, nil, "normal", color = {r = 1, g = 0.4, b = 0.4}},
 				["F6"] = {true, true, true, nil, nil, nil, "normal", color = {r = 1, g = 0.4, b = 0.4}},
+				["F7"] = {true, true, true, nil, nil, nil, "normal", color = {r = 1, g = 0.4, b = 0.4}},
 				-- Water Totems
 				["W1"] = {true, true, true, nil, nil, nil, "normal", color = {r = 0.58, g = 0.72, b = 1}},
 				["W2"] = {true, true, true, nil, nil, nil, "normal", color = {r = 0.58, g = 0.72, b = 1}},
@@ -1187,6 +1188,10 @@ end
 ------------
 function TidyPlatesThreat:specInfo()
 	for i = 1, GetNumTalentGroups() do
+		if not TidyPlatesThreat.db.char.specInfo[i] then
+			TidyPlatesThreat.db.char.specInfo[i] = {}
+		end
+
 		for z = 1, GetNumTalentTabs() do
 			local name, _, pointsSpent, _, _ = GetTalentTabInfo(z, false, false, i)
 			TidyPlatesThreat.db.char.specInfo[i][z] = pointsSpent
@@ -1194,6 +1199,7 @@ function TidyPlatesThreat:specInfo()
 		end
 	end
 end
+
 
 function TidyPlatesThreat:StartUp()
 	TidyPlatesThreat:specInfo()

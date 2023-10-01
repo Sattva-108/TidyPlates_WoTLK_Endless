@@ -117,7 +117,11 @@ TPtotemList = {
 	[TotemName(58771, "VI")] = "W4", -- Mana Spring Totem VI
 	[TotemName(58773, "VII")] = "W4", -- Mana Spring Totem VII
 	[TotemName(58774, "VIII")] = "W4", -- Mana Spring Totem VIII
-	[TotemName(16190)] = "W5" -- Mana Tide Totem
+	[TotemName(16190)] = "W5", -- Mana Tide Totem
+	-- 2.4.3 totems for Endless
+	[TotemName(8166)] = "W1", -- Poison Cleansing Totem
+	[TotemName(25587, "V")] = "A4", -- Windfury Totem V
+	[TotemName(25547, "VII")] = "F7", -- Fire Nova Totem VII
 }
 
 local TotemNameFallback = TidyPlatesUtility.TotemNameFallback
